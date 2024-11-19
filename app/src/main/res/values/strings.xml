@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">TomeRoque</string>
+    <string name="title">Android Challenge</string>
+    <string name="clickme">Click me!</string>
+    <string name="clickmeBody">for a random emoji</string>
+    <string name="clickmeGet">to get_emoji()!</string>
+    <string name="more">See this and more...</string>
+    <string name="inputLabel">Insert a github username</string>
+    <string name="inputHint">tome-roque</string>
+    <string name="inputTitle">Github Api</string>
+    <string name="avatarList">Avatar List</string>
+    <string name="googleRepos">Google Repos</string>
+    <string name="list">List</string>
+</resources>
