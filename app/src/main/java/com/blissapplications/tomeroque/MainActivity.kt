@@ -153,9 +153,7 @@ fun HomeScreen(viewModel: ViewModel = hiltViewModel(), navController: NavControl
     var avatarList by remember { mutableStateOf<List<Avatar>>(emptyList()) }
     val coroutineScope = rememberCoroutineScope()
 
-// Fetch emojis from ViewModel using coroutines
     LaunchedEffect(Unit) {
-        // Ensure this runs asynchronously
         coroutineScope.launch {
             try {
                 val emojis = viewModel.getAllEmojis()
@@ -268,9 +266,8 @@ fun HomeScreen(viewModel: ViewModel = hiltViewModel(), navController: NavControl
 
                                     viewModel.saveEmojis(fetchedEmojis)
 
-                                    val randomEmoji = emojiList.random()
+                                    val randomEmoji = fetchedEmojis.random()
                                     imageUrl = randomEmoji.url
-
                                 }
                             }
                         } else {
@@ -486,7 +483,6 @@ fun HomeScreen(viewModel: ViewModel = hiltViewModel(), navController: NavControl
                                 modifier = Modifier
                                     .width(175.dp)
                                     .height(56.dp)  // Adjust height to avoid cut-off
-                                    .padding(8.dp)  // Optional: Add padding inside the text field
                             )
                         }
                     }

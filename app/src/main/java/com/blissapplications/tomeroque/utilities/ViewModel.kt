@@ -50,6 +50,7 @@ class ViewModel @Inject constructor(
     fun saveEmojis(emojis: List<Emoji>) {
         viewModelScope.launch(Dispatchers.IO) {
             emojiDao.insertAll(emojis)
+            updateEmojis(emojis)
         }
     }
 
